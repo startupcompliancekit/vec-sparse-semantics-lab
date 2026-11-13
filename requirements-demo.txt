@@ -1,0 +1,2 @@
+-r requirements.txt
+anndata==0.12.19

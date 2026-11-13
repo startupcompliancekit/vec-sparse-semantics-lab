@@ -1,0 +1,122 @@
+[
+  {
+    "case": "dense-safe",
+    "numeric_verdict": "NUMERIC_PASS",
+    "duplicate_stored_entries": 0,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": 0.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csr-safe-duplicates",
+    "numeric_verdict": "NUMERIC_PASS",
+    "duplicate_stored_entries": 1,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": 1.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csc-safe-duplicates",
+    "numeric_verdict": "NUMERIC_PASS",
+    "duplicate_stored_entries": 1,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": 1.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csr-float32-sum-overflow",
+    "numeric_verdict": "NUMERIC_FAIL",
+    "duplicate_stored_entries": 1,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 1,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": "nonfinite",
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csc-float64-cast-overflow",
+    "numeric_verdict": "NUMERIC_FAIL",
+    "duplicate_stored_entries": 1,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 1,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": "nonfinite",
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csr-int8-wrap",
+    "numeric_verdict": "NUMERIC_FAIL",
+    "duplicate_stored_entries": 1,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 1,
+    "first_logical_value": -56.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csr-float64-cancellation",
+    "numeric_verdict": "NUMERIC_PASS",
+    "duplicate_stored_entries": 1,
+    "stored_nonfinite_after_float32": 2,
+    "stored_negative": 1,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": 0.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "csr-rounding-order",
+    "numeric_verdict": "NUMERIC_PASS",
+    "duplicate_stored_entries": 2,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 1,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": 1.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "dense-cast-overflow",
+    "numeric_verdict": "NUMERIC_FAIL",
+    "duplicate_stored_entries": 0,
+    "stored_nonfinite_after_float32": 1,
+    "stored_negative": 0,
+    "logical_nonfinite_after_float32": 1,
+    "logical_negative_after_float32": 0,
+    "first_logical_value": "nonfinite",
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  },
+  {
+    "case": "dense-negative",
+    "numeric_verdict": "NUMERIC_FAIL",
+    "duplicate_stored_entries": 0,
+    "stored_nonfinite_after_float32": 0,
+    "stored_negative": 1,
+    "logical_nonfinite_after_float32": 0,
+    "logical_negative_after_float32": 1,
+    "first_logical_value": -1.0,
+    "direct_ingestion_agrees": true,
+    "input_bytes_unchanged": true
+  }
+]
